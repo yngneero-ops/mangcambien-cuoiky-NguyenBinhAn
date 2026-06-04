@@ -1,4 +1,7 @@
 # Hệ thống Phân loại Màu sắc bằng Edge AI (WebAssembly)
+## 👤 Sinh viên thực hiện
+*   **Họ và tên: Nguyễn Bình An
+*   **MSSV: N23DCCI001
 
 Kho lưu trữ này chứa toàn bộ mã nguồn của hệ thống Trí tuệ nhân tạo tại biên (Edge AI) phục vụ cho bài toán phân loại khối lập phương theo 4 màu sắc cơ bản: `red` (đỏ), `green` (xanh lá), `blue` (xanh dương), và `yellow` (vàng). 
 
