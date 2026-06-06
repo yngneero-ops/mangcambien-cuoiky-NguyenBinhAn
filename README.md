@@ -26,10 +26,14 @@ Do chính sách bảo mật của các trình duyệt hiện đại (CORS policy
 
 Để thuận tiện cho việc đánh giá, quá trình kiểm thử được chia làm 2 phương thức: Kiểm thử thực tế qua Camera và Kiểm chứng mã nguồn nén tại biên.
 
-### Phương thức 1: Kiểm thử Camera trực tiếp (Khuyên dùng)
-Hệ thống đã được cấu hình sẵn để test thời gian thực thông qua Mobile Client của Edge Impulse.
-1. Truy cập vào dự án Edge Impulse công khai tại đường link: **https://studio.edgeimpulse.com/public/1018230/latest**
-. Sử dụng điện thoại quét mã QR tại "run this model" hoặc kết nối thiết bị để hệ thống mở luồng Camera và tiến hành nhận diện 4 khối màu thực tế.
+### 🛠️ Phương thức 1: Kiểm thử Camera trực tiếp qua Edge Impulse (Khuyên dùng)
+Do chính sách bảo mật API nghiêm ngặt của nền tảng đối với các dự án công khai, giảng viên vui lòng thực hiện tuần tự theo 5 bước sau để kích hoạt luồng camera trên thiết bị di động cá nhân:
+
+1. **Truy cập dự án công khai:** Truy cập vào liên kết không gian làm việc của dự án tại địa chỉ: `https://studio.edgeimpulse.com/public/1018230`
+2. **Sao chép dự án (Clone Project):** Bấm vào nút **"Clone project"** ở góc trên bên phải màn hình để đồng bộ toàn bộ tập dữ liệu (dataset) và cấu trúc mạng nơ-ron về tài khoản cá nhân.
+3. **Thiết lập kết nối Client:** Tại giao diện dự án vừa sao chép, di chuyển đến mục **Devices** (ở thanh menu bên trái) -> Chọn **Connect a new device** -> Chọn tiếp **Use your mobile phone**.
+4. **Quét mã kiểm thử:** Sử dụng camera của điện thoại quét mã QR hiển thị trên màn hình máy tính để trình duyệt cấp quyền truy cập phần cứng.
+5. **Thực thi suy luận thời gian thực:** Trên giao diện trình duyệt điện thoại vừa mở ra, cuộn xuống dưới cùng và bấm chọn nút **"Switch to classification mode"** (Chuyển sang chế độ phân loại). Tiến hành hướng ống kính vào các khối màu lập phương để kiểm chứng độ chính xác (Confidence score đạt từ 0.95 đến 1.00) và tốc độ xử lý biên tối ưu (~1ms).
 
 ### Phương thức 2: Kiểm chứng mã nguồn WebAssembly chạy Offline (Developer Mode)
 Đây là mã nguồn chứng minh mô hình nơ-ron đã được lượng tử hóa và có thể chạy hoàn toàn độc lập không cần Internet.
