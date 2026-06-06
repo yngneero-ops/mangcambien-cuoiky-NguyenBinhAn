@@ -28,7 +28,7 @@ Do chính sách bảo mật của các trình duyệt hiện đại (CORS policy
 
 ### Phương thức 1: Kiểm thử Camera trực tiếp (Khuyên dùng)
 Hệ thống đã được cấu hình sẵn để test thời gian thực thông qua Mobile Client của Edge Impulse.
-1. ruy cập vào dự án Edge Impulse công khai của sinh viên tại đường link: **https://studio.edgeimpulse.com/studio/1018230**
+1. Truy cập vào dự án Edge Impulse công khai của sinh viên tại đường link: **https://studio.edgeimpulse.com/studio/1018230**
 2. Chuyển sang tab **Live classification**.
 3. Sử dụng điện thoại quét mã QR hoặc kết nối thiết bị để hệ thống mở luồng Camera và tiến hành nhận diện 4 khối màu thực tế.
 
