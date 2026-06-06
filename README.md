@@ -22,23 +22,19 @@ Dự án bao gồm các tệp tin cốt lõi sau để khởi chạy mô hình t
 
 Do chính sách bảo mật của các trình duyệt hiện đại (CORS policy), không thể mở trực tiếp tệp `index.html` bằng cách nhấp đúp chuột. Vui lòng chạy dự án thông qua một Local Server theo một trong hai cách dưới đây:
 
-### Cách 1: Sử dụng Python (Khuyên dùng)
-Yêu cầu: Máy tính đã cài đặt sẵn Python 3.
-1. Tải toàn bộ mã nguồn này về máy (Download ZIP hoặc dùng lệnh `git clone`).
-2. Mở Terminal (hoặc Command Prompt) tại thư mục vừa giải nén.
-3. Khởi chạy máy chủ cục bộ bằng lệnh sau:
-```bash
-   python server.py
-   # hoặc dùng lệnh: python3 server.py (đối với macOS/Linux)
-```
-4. Mở trình duyệt web (Chrome, Edge, Safari) và truy cập vào địa chỉ: `http://localhost:8000`
-5. Cấp quyền truy cập Camera khi trình duyệt yêu cầu để bắt đầu kiểm thử nhận diện màu sắc theo thời gian thực.
+## 🚀 Hướng dẫn kiểm thử hệ thống
 
-### Cách 2: Sử dụng VS Code (Live Server)
-1. Mở thư mục chứa mã nguồn bằng phần mềm Visual Studio Code.
-2. Cài đặt tiện ích mở rộng (Extension) mang tên **Live Server** của tác giả Ritwick Dey.
-3. Nhấp chuột phải vào tệp `index.html` và chọn **"Open with Live Server"**.
-4. Trình duyệt sẽ tự động bật lên. Hãy cấp quyền Camera và sử dụng hệ thống.
+Để thuận tiện cho việc đánh giá, quá trình kiểm thử được chia làm 2 phương thức: Kiểm thử thực tế qua Camera và Kiểm chứng mã nguồn nén tại biên.
 
----
-**Lưu ý kiểm thử:** Để mô hình đạt độ chính xác cao nhất (có thể lên tới 1.00), vui lòng đặt vật thể trên phông nền ít chi tiết và đảm bảo điều kiện ánh sáng phòng phân bổ đều, không bị lóa sáng mạnh.
+### Phương thức 1: Kiểm thử Camera trực tiếp (Khuyên dùng)
+Hệ thống đã được cấu hình sẵn để test thời gian thực thông qua Mobile Client của Edge Impulse.
+1. ruy cập vào dự án Edge Impulse công khai của sinh viên tại đường link: **https://studio.edgeimpulse.com/studio/1018230**
+2. Chuyển sang tab **Live classification**.
+3. Sử dụng điện thoại quét mã QR hoặc kết nối thiết bị để hệ thống mở luồng Camera và tiến hành nhận diện 4 khối màu thực tế.
+
+### Phương thức 2: Kiểm chứng mã nguồn WebAssembly chạy Offline (Developer Mode)
+Đây là mã nguồn chứng minh mô hình nơ-ron đã được lượng tử hóa và có thể chạy hoàn toàn độc lập không cần Internet.
+1. Tải toàn bộ mã nguồn về máy và khởi chạy Local Server:
+   `python server.py` (hoặc `python3 server.py`)
+2. Mở trình duyệt web truy cập: `http://localhost:8000`
+3. Để kiểm tra bộ não AI tính toán offline, vui lòng lấy một chuỗi "Raw features" (đặc trưng ma trận ảnh) từ nền tảng Edge Impulse, dán vào ô trống và bấm "Run inference". Hệ thống sẽ trả về kết quả JSON với tốc độ ~1ms.
