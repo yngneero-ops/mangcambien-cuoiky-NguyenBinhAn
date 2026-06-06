@@ -29,7 +29,7 @@ Do chính sách bảo mật của các trình duyệt hiện đại (CORS policy
 ### 🛠️ Phương thức 1: Kiểm thử Camera trực tiếp qua Edge Impulse (Khuyên dùng)
 Do chính sách bảo mật API nghiêm ngặt của nền tảng đối với các dự án công khai, giảng viên vui lòng thực hiện tuần tự theo 5 bước sau để kích hoạt luồng camera trên thiết bị di động cá nhân:
 
-1. **Truy cập dự án công khai:** Truy cập vào liên kết không gian làm việc của dự án tại địa chỉ: [https://studio.edgeimpulse.com/public/1018230]
+1. **Truy cập dự án công khai:** Truy cập vào liên kết không gian làm việc của dự án tại địa chỉ: [https://studio.edgeimpulse.com/studio/1018230]
 2. **Sao chép dự án (Clone Project):** Bấm vào nút **"Clone project"** ở góc trên bên phải màn hình để đồng bộ toàn bộ tập dữ liệu (dataset) và cấu trúc mạng nơ-ron về tài khoản cá nhân.
 3. **Thiết lập kết nối Client:** Tại giao diện dự án vừa sao chép, di chuyển đến mục **Devices** (ở thanh menu bên trái) -> Chọn **Connect a new device** -> Chọn tiếp **Use your mobile phone**.
 4. **Quét mã kiểm thử:** Sử dụng camera của điện thoại quét mã QR hiển thị trên màn hình máy tính để trình duyệt cấp quyền truy cập phần cứng.
