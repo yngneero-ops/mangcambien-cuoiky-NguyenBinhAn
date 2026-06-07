@@ -39,5 +39,5 @@ Do chính sách bảo mật API nghiêm ngặt của nền tảng đối với c
 Đây là mã nguồn chứng minh mô hình nơ-ron đã được lượng tử hóa và có thể chạy hoàn toàn độc lập không cần Internet.
 1. Tải toàn bộ mã nguồn về máy và khởi chạy Local Server:
    `python server.py` (hoặc `python3 server.py`)
-2. Mở trình duyệt web truy cập: `http://localhost:8000`
+2. Mở trình duyệt web truy cập: `http://localhost:8082`
 3. Để kiểm tra bộ não AI tính toán offline, vui lòng lấy một chuỗi "Raw features" (đặc trưng ma trận ảnh) từ nền tảng Edge Impulse, dán vào ô trống và bấm "Run inference". Hệ thống sẽ trả về kết quả JSON với tốc độ ~1ms.
